@@ -1,0 +1,1360 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    system_mdr32f9qx.o(i.SystemCoreClockUpdate) refers to system_mdr32f9qx.o(.data) for SystemCoreClock
+    system_mdr32f9qx.o(i.SystemInit) refers to system_mdr32f9qx.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    system_mdr32f9qx.o(i.SystemInit) refers to system_mdr32f9qx.o(i.SetSysClock) for SetSysClock
+    startup_mdr32f9qx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(RESET) refers to startup_mdr32f9qx.o(STACK) for __initial_sp
+    startup_mdr32f9qx.o(RESET) refers to startup_mdr32f9qx.o(.text) for Reset_Handler
+    startup_mdr32f9qx.o(RESET) refers to systick.o(i.SysTick_Handler) for SysTick_Handler
+    startup_mdr32f9qx.o(RESET) refers to ad7610.o(i.Timer3_IRQHandler) for Timer3_IRQHandler
+    startup_mdr32f9qx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(.text) refers to system_mdr32f9qx.o(i.SystemInit) for SystemInit
+    startup_mdr32f9qx.o(.text) refers to __main.o(!!!main) for __main
+    startup_mdr32f9qx.o(.text) refers to startup_mdr32f9qx.o(HEAP) for Heap_Mem
+    startup_mdr32f9qx.o(.text) refers to startup_mdr32f9qx.o(STACK) for Stack_Mem
+    main.o(i.main) refers to vcom_config.o(i.VCom_Configuration) for VCom_Configuration
+    main.o(i.main) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_Init) for USB_CDC_Init
+    main.o(i.main) refers to vcom_config.o(i.Setup_USB) for Setup_USB
+    main.o(i.main) refers to ringqueue.o(i.RingQueInit) for RingQueInit
+    main.o(i.main) refers to ad7610.o(i.ADCInit) for ADCInit
+    main.o(i.main) refers to mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) for USB_DeviceDispatchEvent
+    main.o(i.main) refers to icpanibul.o(i.Icpanibul) for Icpanibul
+    main.o(i.main) refers to main.o(.bss) for Buffer
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_HSEconfig) for RST_CLK_HSEconfig
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_HSEstatus) for RST_CLK_HSEstatus
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLconfig) for RST_CLK_CPU_PLLconfig
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLcmd) for RST_CLK_CPU_PLLcmd
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLstatus) for RST_CLK_CPU_PLLstatus
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_eeprom.o(i.EEPROM_SetLatency) for EEPROM_SetLatency
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLuse) for RST_CLK_CPU_PLLuse
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPUclkPrescaler) for RST_CLK_CPUclkPrescaler
+    vcom_config.o(i.Setup_CPU_Clock) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPUclkSelection) for RST_CLK_CPUclkSelection
+    vcom_config.o(i.Setup_USB) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
+    vcom_config.o(i.Setup_USB) refers to mdr32f9qx_usb_device.o(i.USB_DeviceInit) for USB_DeviceInit
+    vcom_config.o(i.Setup_USB) refers to mdr32f9qx_usb.o(i.USB_SetSIM) for USB_SetSIM
+    vcom_config.o(i.Setup_USB) refers to mdr32f9qx_usb_device.o(i.USB_DevicePowerOn) for USB_DevicePowerOn
+    vcom_config.o(i.Setup_USB) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) for USB_CDC_Reset
+    vcom_config.o(i.Setup_USB) refers to vcom_config.o(.data) for USB_Clock_InitStruct
+    vcom_config.o(i.Setup_USB) refers to vcom_config.o(.bss) for USB_DeviceBUSParam
+    vcom_config.o(i.USB_CDC_GetLineCoding) refers to vcom_config.o(.data) for LineCoding
+    vcom_config.o(i.USB_CDC_RecieveData) refers to vcom_config.o(.data) for ReceivedByteCount
+    vcom_config.o(i.USB_CDC_SetLineCoding) refers to vcom_config.o(.data) for LineCoding
+    vcom_config.o(i.USB_DeviceSetupPacket_Debug) refers to mdr32f9qx_usb.o(i.USB_GetSA) for USB_GetSA
+    vcom_config.o(i.USB_DeviceSetupPacket_Debug) refers to mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) for USB_DeviceSetupPacket
+    vcom_config.o(i.USB_DeviceSetupPacket_Debug) refers to vcom_config.o(.data) for SPIndex
+    vcom_config.o(i.USB_DeviceSetupPacket_Debug) refers to vcom_config.o(.bss) for SetupPackets
+    vcom_config.o(i.VCom_Configuration) refers to vcom_config.o(.data) for LineCoding
+    adg439.o(i.ADG439Init) refers to mdr32f9qx_port.o(i.PORT_Init) for PORT_Init
+    adg439.o(i.ADG439OnCh) refers to adg439.o(.data) for chanels
+    ad7610.o(i.AD7610ConvertData) refers to adg439.o(i.ADG439OnCh) for ADG439OnCh
+    ad7610.o(i.AD7610ConvertData) refers to mdr32f9qx_ssp.o(i.SSP_SendData) for SSP_SendData
+    ad7610.o(i.AD7610ConvertData) refers to ad7610.o(.data) for old_ch
+    ad7610.o(i.AD7610GetConfig) refers to mdr32f9qx_eeprom.o(i.EEPROM_ReadByte) for EEPROM_ReadByte
+    ad7610.o(i.AD7610GetConfig) refers to ad7610.o(i.AD7610SetConfig) for AD7610SetConfig
+    ad7610.o(i.AD7610GetConfig) refers to ad7610.o(.data) for AD7610_SCP
+    ad7610.o(i.AD7610ReadConfig) refers to ad7610.o(.data) for AD7610_SCP
+    ad7610.o(i.AD7610SaveConfig) refers to mdr32f9qx_eeprom.o(i.EEPROM_ErasePage) for EEPROM_ErasePage
+    ad7610.o(i.AD7610SaveConfig) refers to mdr32f9qx_eeprom.o(i.EEPROM_ProgramByte) for EEPROM_ProgramByte
+    ad7610.o(i.AD7610SaveConfig) refers to ad7610.o(.data) for AD7610_SCP
+    ad7610.o(i.AD7610SetConfig) refers to mdr32f9qx_ssp.o(i.SSP_SendData) for SSP_SendData
+    ad7610.o(i.AD7610SetConfig) refers to ad7610.o(.data) for AD7610_SCP
+    ad7610.o(i.ADCInit) refers to mdr32f9qx_port.o(i.PORT_DeInit) for PORT_DeInit
+    ad7610.o(i.ADCInit) refers to mdr32f9qx_port.o(i.PORT_Init) for PORT_Init
+    ad7610.o(i.ADCInit) refers to spi.o(i.SPIInit) for SPIInit
+    ad7610.o(i.ADCInit) refers to ad7610.o(i.TIMER3_ETR_Setup) for TIMER3_ETR_Setup
+    ad7610.o(i.ADCInit) refers to ad7610.o(i.AD7610GetConfig) for AD7610GetConfig
+    ad7610.o(i.ADCInit) refers to adg439.o(i.ADG439Init) for ADG439Init
+    ad7610.o(i.Timer3_IRQHandler) refers to mdr32f9qx_ssp.o(i.SSP_ReceiveData) for SSP_ReceiveData
+    ad7610.o(i.Timer3_IRQHandler) refers to ad7610.o(.data) for new_data
+    mdr32f9qx_eeprom.o(i.EEPROM_EraseAllPages) refers to mdr32f9qx_eeprom.o(i.ProgramDelay) for ProgramDelay
+    mdr32f9qx_eeprom.o(i.EEPROM_ErasePage) refers to mdr32f9qx_eeprom.o(i.ProgramDelay) for ProgramDelay
+    mdr32f9qx_eeprom.o(i.EEPROM_ProgramByte) refers to mdr32f9qx_eeprom.o(i.EEPROM_ReadWord) for EEPROM_ReadWord
+    mdr32f9qx_eeprom.o(i.EEPROM_ProgramByte) refers to mdr32f9qx_eeprom.o(i.EEPROM_ProgramWord) for EEPROM_ProgramWord
+    mdr32f9qx_eeprom.o(i.EEPROM_ProgramHalfWord) refers to mdr32f9qx_eeprom.o(i.EEPROM_ReadWord) for EEPROM_ReadWord
+    mdr32f9qx_eeprom.o(i.EEPROM_ProgramHalfWord) refers to mdr32f9qx_eeprom.o(i.EEPROM_ProgramWord) for EEPROM_ProgramWord
+    mdr32f9qx_eeprom.o(i.EEPROM_ProgramWord) refers to mdr32f9qx_eeprom.o(i.ProgramDelay) for ProgramDelay
+    mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_DeInit) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_WarmDeInit) for RST_CLK_WarmDeInit
+    mdr32f9qx_rst_clk.o(i.RST_CLK_DeInit) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
+    mdr32f9qx_rst_clk.o(i.RST_CLK_HSEstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_HSIstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_LSEstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_LSIstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_USB_PLLstatus) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus) for RST_CLK_GetFlagStatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_WarmDeInit) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_HSIcmd) for RST_CLK_HSIcmd
+    mdr32f9qx_rst_clk.o(i.RST_CLK_WarmDeInit) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_HSIstatus) for RST_CLK_HSIstatus
+    mdr32f9qx_rst_clk.o(i.RST_CLK_WarmDeInit) refers to mdr32f9qx_rst_clk.o(i.RST_CLK_CPUclkSelection) for RST_CLK_CPUclkSelection
+    mdr32f9qx_usb.o(i.USB_Reset) refers to mdr32f9qx_usb.o(i.USB_SetHSCR) for USB_SetHSCR
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to vcom_config.o(i.USB_CDC_GetLineCoding) for USB_CDC_GetLineCoding
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) for USB_EP_doDataIn
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_device.o(.data) for USB_CurrentSetupPacket
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut) for USB_CDC_DoDataOut
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_cdc.o(.data) for CDC_ClassPacketData
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) refers to mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusOutAck) for USB_DeviceDoStatusOutAck
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut) refers to vcom_config.o(i.USB_CDC_SetLineCoding) for USB_CDC_SetLineCoding
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) for USB_EP_doDataIn
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut) refers to mdr32f9qx_usb_device.o(.data) for USB_CurrentSetupPacket
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) for USB_EP_doDataIn
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor) refers to mdr32f9qx_usb_cdc.o(.data) for Usb_CDC_Device_Descriptor
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor) refers to mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusOutAck) for USB_DeviceDoStatusOutAck
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Init) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_SetReceiveBuffer) for USB_CDC_SetReceiveBuffer
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Init) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive) refers to vcom_config.o(i.USB_CDC_RecieveData) for USB_CDC_RecieveData
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataSent) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStart) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStart) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStart) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive) for USB_CDC_OnDataReceive
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStop) refers to mdr32f9qx_usb_device.o(i.USB_EP_Stall) for USB_EP_Stall
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStop) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) refers to mdr32f9qx_usb_device.o(i.USB_DeviceReset) for USB_DeviceReset
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) refers to mdr32f9qx_usb_device.o(i.USB_EP_Init) for USB_EP_Init
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive) for USB_CDC_OnDataReceive
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) for USB_EP_doDataIn
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataSent) for USB_CDC_OnDataSent
+    mdr32f9qx_usb_cdc.o(i.USB_CDC_SetReceiveBuffer) refers to mdr32f9qx_usb_cdc.o(.bss) for USB_CDCContext
+    mdr32f9qx_usb_device.o(i.USB_DeviceClearFeature) refers to mdr32f9qx_usb_device.o(i.USB_EP_Idle) for USB_EP_Idle
+    mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSIS) for USB_GetSIS
+    mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_DeviceReset) for USB_DeviceReset
+    mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) for USB_EP_dispatchEvent
+    mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) refers to mdr32f9qx_usb.o(i.USB_SetSIS) for USB_SetSIS
+    mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent) refers to mdr32f9qx_usb_device.o(.data) for bHandling
+    mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusOutAck) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb.o(i.USB_BRGInit) for USB_BRGInit
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb.o(i.USB_Reset) for USB_Reset
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb.o(i.USB_SetHSCR) for USB_SetHSCR
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb.o(i.USB_SetSC) for USB_SetSC
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb_device.o(i.USB_EP_Init) for USB_EP_Init
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb_device.o(i.USB_EP_setSetupHandler) for USB_EP_setSetupHandler
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to vcom_config.o(i.USB_DeviceSetupPacket_Debug) for USB_DeviceSetupPacket_Debug
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb_device.o(.data) for USB_CurrentSetupPacket
+    mdr32f9qx_usb_device.o(i.USB_DeviceInit) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_DevicePowerOff) refers to mdr32f9qx_usb.o(i.USB_SetHSCR) for USB_SetHSCR
+    mdr32f9qx_usb_device.o(i.USB_DevicePowerOff) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_DevicePowerOn) refers to mdr32f9qx_usb.o(i.USB_SetHSCR) for USB_SetHSCR
+    mdr32f9qx_usb_device.o(i.USB_DevicePowerOn) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_DeviceReset) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetFeature) refers to mdr32f9qx_usb_device.o(i.USB_EP_Stall) for USB_EP_Stall
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) for USB_EP_doDataIn
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(i.USB_DeviceClearFeature) for USB_DeviceClearFeature
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(i.USB_DeviceSetFeature) for USB_DeviceSetFeature
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor) for USB_CDC_GetDescriptor
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) for USB_EP_doDataOut
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest) for USB_CDC_ClassRequest
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(.data) for SetupPacketData
+    mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket) refers to mdr32f9qx_usb_device.o(i.USB_Device_setAddressWork) for USB_Device_setAddressWork
+    mdr32f9qx_usb_device.o(i.USB_Device_setAddressWork) refers to mdr32f9qx_usb.o(i.USB_SetSA) for USB_SetSA
+    mdr32f9qx_usb_device.o(i.USB_Device_setAddressWork) refers to mdr32f9qx_usb_device.o(.bss) for USB_DeviceContext
+    mdr32f9qx_usb_device.o(i.USB_EP_Idle) refers to mdr32f9qx_usb_device.o(i.USB_EP_SetReady) for USB_EP_SetReady
+    mdr32f9qx_usb_device.o(i.USB_EP_Idle) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_Init) refers to mdr32f9qx_usb.o(i.USB_SetSEPxCTRL) for USB_SetSEPxCTRL
+    mdr32f9qx_usb_device.o(i.USB_EP_Init) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_Reset) refers to mdr32f9qx_usb.o(i.USB_SetSEPxCTRL) for USB_SetSEPxCTRL
+    mdr32f9qx_usb_device.o(i.USB_EP_Reset) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_SetReady) refers to mdr32f9qx_usb.o(i.USB_SetSIS) for USB_SetSIS
+    mdr32f9qx_usb_device.o(i.USB_EP_SetReady) refers to mdr32f9qx_usb.o(i.USB_SetSEPxCTRL) for USB_SetSEPxCTRL
+    mdr32f9qx_usb_device.o(i.USB_EP_SetReady) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_Stall) refers to mdr32f9qx_usb_device.o(i.USB_EP_SetReady) for USB_EP_SetReady
+    mdr32f9qx_usb_device.o(i.USB_EP_Stall) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSEPxSTS) for USB_GetSEPxSTS
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSEPxTS) for USB_GetSEPxTS
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSEPxCTRL) for USB_GetSEPxCTRL
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_EP_Stall) for USB_EP_Stall
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_EP_Idle) for USB_EP_Idle
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) for USB_EP_sendInDataPortion
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSEPxRXFDC) for USB_GetSEPxRXFDC
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_GetSEPxRXFD) for USB_GetSEPxRXFD
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to ringqueue.o(i.RingQuePut) for RingQuePut
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb.o(i.USB_SetSEPxRXFC) for USB_SetSEPxRXFC
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb_device.o(i.USB_EP_SetReady) for USB_EP_SetReady
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent) refers to main.o(.bss) for QueUSB
+    mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) refers to mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) for USB_EP_sendInDataPortion
+    mdr32f9qx_usb_device.o(i.USB_EP_doDataIn) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) refers to mdr32f9qx_usb_device.o(i.USB_EP_Idle) for USB_EP_Idle
+    mdr32f9qx_usb_device.o(i.USB_EP_doDataOut) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb.o(i.USB_SetSEPxTXFDC) for USB_SetSEPxTXFDC
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb.o(i.USB_SEPxToggleEPDATASEQ) for USB_SEPxToggleEPDATASEQ
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb.o(i.USB_SetSEPxCTRL) for USB_SetSEPxCTRL
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb.o(i.USB_SetSEPxTXFD) for USB_SetSEPxTXFD
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb_device.o(i.USB_EP_SetReady) for USB_EP_SetReady
+    mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    mdr32f9qx_usb_device.o(i.USB_EP_setSetupHandler) refers to mdr32f9qx_usb_device.o(i.USB_EP_Idle) for USB_EP_Idle
+    mdr32f9qx_usb_device.o(i.USB_EP_setSetupHandler) refers to mdr32f9qx_usb_device.o(.bss) for USB_EPContext
+    systick.o(i.SysTick_Handler) refers to systick.o(.data) for TimingDelay_ms
+    icpanibul.o(i.GetVaSN) refers to __2sprintf.o(.text) for __2sprintf
+    icpanibul.o(i.Icpanibul) refers to ringqueue.o(i.RingQueGet) for RingQueGet
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(i.GetVaSN) for GetVaSN
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(i.ReadConfig) for ReadConfig
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(i.SaveConfig) for SaveConfig
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(i.SetConfig) for SetConfig
+    icpanibul.o(i.Icpanibul) refers to utility.o(i.uiAscii2byte) for uiAscii2byte
+    icpanibul.o(i.Icpanibul) refers to ad7610.o(i.AD7610ConvertData) for AD7610ConvertData
+    icpanibul.o(i.Icpanibul) refers to __2sprintf.o(.text) for __2sprintf
+    icpanibul.o(i.Icpanibul) refers to mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData) for USB_CDC_SendData
+    icpanibul.o(i.Icpanibul) refers to main.o(.bss) for QueUSB
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(.bss) for tmp
+    icpanibul.o(i.Icpanibul) refers to icpanibul.o(.data) for bytes
+    icpanibul.o(i.ReadConfig) refers to ad7610.o(i.AD7610ReadConfig) for AD7610ReadConfig
+    icpanibul.o(i.SaveConfig) refers to ad7610.o(i.AD7610SaveConfig) for AD7610SaveConfig
+    icpanibul.o(i.SetConfig) refers to ringqueue.o(i.RingQueGet) for RingQueGet
+    icpanibul.o(i.SetConfig) refers to ad7610.o(i.AD7610SetConfig) for AD7610SetConfig
+    icpanibul.o(i.SetConfig) refers to icpanibul.o(.bss) for tmp
+    icpanibul.o(i.SetConfig) refers to main.o(.bss) for QueUSB
+    ringqueue.o(i.RingQueGet) refers to ringqueue.o(i.min) for min
+    ringqueue.o(i.RingQueGet) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    ringqueue.o(i.RingQuePut) refers to ringqueue.o(i.min) for min
+    ringqueue.o(i.RingQuePut) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    spi.o(i.SPIInit) refers to mdr32f9qx_ssp.o(i.SSP_DeInit) for SSP_DeInit
+    spi.o(i.SPIInit) refers to mdr32f9qx_ssp.o(i.SSP_BRGInit) for SSP_BRGInit
+    spi.o(i.SPIInit) refers to mdr32f9qx_ssp.o(i.SSP_Init) for SSP_Init
+    spi.o(i.SPIInit) refers to mdr32f9qx_ssp.o(i.SSP_Cmd) for SSP_Cmd
+    __2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    __2sprintf.o(.text) refers to _sputc.o(.text) for _sputc
+    noretval__2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    noretval__2sprintf.o(.text) refers to _sputc.o(.text) for _sputc
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    _printf_char_common.o(.text) refers to __printf_nopercent.o(.text) for __printf
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_mdr32f9qx.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing vcom_config.o(i.Setup_CPU_Clock), (92 bytes).
+    Removing mdr32f9qx_eeprom.o(i.EEPROM_EraseAllPages), (140 bytes).
+    Removing mdr32f9qx_eeprom.o(i.EEPROM_ProgramHalfWord), (60 bytes).
+    Removing mdr32f9qx_eeprom.o(i.EEPROM_ReadHalfWord), (96 bytes).
+    Removing mdr32f9qx_eeprom.o(i.EEPROM_SetLatency), (12 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_ReadInputData), (6 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_ReadInputDataBit), (16 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_ResetBits), (28 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_SetBits), (28 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_StructInit), (28 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_Write), (24 bytes).
+    Removing mdr32f9qx_port.o(i.PORT_WriteBit), (44 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_ADCclkEnable), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_ADCclkPrescaler), (24 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_ADCclkSelection), (20 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLcmd), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLconfig), (64 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPU_PLLuse), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPUclkPrescaler), (24 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_CPUclkSelection), (20 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_DeInit), (44 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_GetClocksFreq), (604 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_GetFlagStatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSEclkPrescaler), (20 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSEconfig), (60 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSEstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSIadjust), (24 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSIclkPrescaler), (24 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSIcmd), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_HSIstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_LSEconfig), (60 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_LSEstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_LSIadjust), (24 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_LSIcmd), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_LSIstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_RTC_HSEclkEnable), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_RTC_HSIclkEnable), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USB_PLLcmd), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USB_PLLconfig), (64 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USB_PLLstatus), (52 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USB_PLLuse), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USBclkEnable), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_USBclkPrescaler), (12 bytes).
+    Removing mdr32f9qx_rst_clk.o(i.RST_CLK_WarmDeInit), (84 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_ClearITPendingBit), (8 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_DMACmd), (24 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_GetFlagStatus), (16 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_GetITStatus), (18 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_GetITStatusMasked), (16 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_ITConfig), (18 bytes).
+    Removing mdr32f9qx_ssp.o(i.SSP_StructInit), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_BRGInit), (84 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_BRKPolarityConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnBRKResetConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnCCR1_Cmd), (30 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnCCR1_EventSourceConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnCapturePrescalerConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnCompare1Config), (32 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnCompareConfig), (32 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnETRResetConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnETR_Cmd), (30 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnEventSourceConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnFilterConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnInit), (70 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnNOutConfig), (36 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnNOutModeConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnNOutPolarityConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnNOutSourceConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutConfig), (34 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutDTGConfig), (20 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutInit), (66 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutModeConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutPolarityConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutSourceConfig), (26 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnOutStructInit), (22 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnREFFormatConfig), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ChnStructInit), (28 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ClearFlag), (8 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_Cmd), (20 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_CntAutoreloadConfig), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_CntEventSourceConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_CntInit), (54 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_CntStructInit), (28 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_CounterModeConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_DMACmd), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_DeInit), (68 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ETRFilterConfig), (16 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ETRInputConfig), (22 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ETRPolarityConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ETRPrescalerConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_FilterSamplingConfig), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetChnCapture), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetChnCapture1), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetChnWriteComplete), (28 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetCntWriteComplete), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetCounter), (8 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetCounterDirection), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetFlagStatus), (16 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetITStatus), (24 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_GetStatus), (6 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_ITConfig), (18 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetChnCompare), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetChnCompare1), (14 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetCntAutoreload), (4 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetCntPrescaler), (4 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetCounter), (4 bytes).
+    Removing mdr32f9qx_timer.o(i.TIMER_SetCounterDirection), (14 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHFN), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHIM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHIS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXCS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFDC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXP), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSCR), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSTM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSVR), (36 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXLC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXSE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXT), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxNTS), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxRXFC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxTXFD), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxTXFDC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSFN), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSIM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSLS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHIM), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHIS), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHRXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXC), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXLC), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXSE), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXT), (12 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_DummyDataReceive), (6 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_DummyDataSent), (4 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_DummyGetLineCoding), (6 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_DummySetLineCoding), (6 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStart), (32 bytes).
+    Removing mdr32f9qx_usb_cdc.o(i.USB_CDC_ReceiveStop), (24 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusInAck), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyClassRequest), (4 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyDataError), (8 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyGetConfiguration), (4 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyGetDescriptor), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyGetInterface), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyGetStatus), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummySetAddress), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummySetConfiguration), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummySetDescriptor), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummySetInterface), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummySyncFrame), (6 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceDummyVendorRequest), (4 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DevicePowerOff), (24 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceResume), (4 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_DeviceSuspend), (4 bytes).
+    Removing mdr32f9qx_usb_device.o(i.USB_EP_Reset), (44 bytes).
+    Removing ringqueue.o(i.RingQueClear), (10 bytes).
+    Removing ringqueue.o(i.uiRingQueEmpty), (18 bytes).
+    Removing ringqueue.o(i.uiRingQueIsFull), (18 bytes).
+    Removing utility.o(i.uiNibble2ascii), (24 bytes).
+
+176 unused section(s) (total 4636 bytes) removed from the image.
+
+==============================================================================
+
+Adding Veneers to the image
+
+    Adding TT veneer (10 bytes, Long) for call to 'EEPROM_ReadByte' from ad7610.o(i.AD7610GetConfig).
+    Adding TT veneer (10 bytes, Long) for call to 'EEPROM_ErasePage' from ad7610.o(i.AD7610SaveConfig).
+    Adding TT veneer (10 bytes, Long) for call to 'EEPROM_ProgramByte' from ad7610.o(i.AD7610SaveConfig).
+
+3 Veneer(s) (total 30 bytes) added to the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    app\vcp\VCom_Config.c                    0x00000000   Number         0  vcom_config.o ABSOLUTE
+    chips\ad7610\ad7610.c                    0x00000000   Number         0  ad7610.o ABSOLUTE
+    chips\adg439\adg439.c                    0x00000000   Number         0  adg439.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    icpanibul\icpanibul.c                    0x00000000   Number         0  icpanibul.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_eeprom.c     0x00000000   Number         0  mdr32f9qx_eeprom.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_port.c       0x00000000   Number         0  mdr32f9qx_port.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_rst_clk.c    0x00000000   Number         0  mdr32f9qx_rst_clk.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_ssp.c        0x00000000   Number         0  mdr32f9qx_ssp.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_timer.c      0x00000000   Number         0  mdr32f9qx_timer.o ABSOLUTE
+    lib\src\MDR32F9Qx\MDR32F9Qx_usb.c        0x00000000   Number         0  mdr32f9qx_usb.o ABSOLUTE
+    lib\src\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_CDC.c 0x00000000   Number         0  mdr32f9qx_usb_cdc.o ABSOLUTE
+    lib\src\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.c 0x00000000   Number         0  mdr32f9qx_usb_device.o ABSOLUTE
+    lib\src\cmsis\startup_MDR32F9Qx.s        0x00000000   Number         0  startup_mdr32f9qx.o ABSOLUTE
+    lib\src\cmsis\system_MDR32F9Qx.c         0x00000000   Number         0  system_mdr32f9qx.o ABSOLUTE
+    main\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    queue\ringqueue.c                        0x00000000   Number         0  ringqueue.o ABSOLUTE
+    spi\spi.c                                0x00000000   Number         0  spi.o ABSOLUTE
+    system\systick.c                         0x00000000   Number         0  systick.o ABSOLUTE
+    utility\utility.c                        0x00000000   Number         0  utility.o ABSOLUTE
+    RESET                                    0x08000000   Section      192  startup_mdr32f9qx.o(RESET)
+    !!!main                                  0x080000c0   Section        8  __main.o(!!!main)
+    !!!scatter                               0x080000c8   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x080000fc   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x08000118   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x08000134   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x08000136   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x08000136   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x08000138   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x0800013a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x0800013a   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x0800013c   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x0800013c   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x0800013c   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x08000142   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x08000142   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000146   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000146   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0800014e   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x08000150   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x08000150   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x08000154   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x0800015c   Section       64  startup_mdr32f9qx.o(.text)
+    .text                                    0x0800019c   Section        0  __2sprintf.o(.text)
+    .text                                    0x080001c8   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x08000252   Section        0  heapauxi.o(.text)
+    .text                                    0x08000258   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x08000259   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x08000288   Section        0  _sputc.o(.text)
+    .text                                    0x08000292   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x080002f6   Section        0  __printf_nopercent.o(.text)
+    .text                                    0x0800031e   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x08000368   Section        0  exit.o(.text)
+    .text                                    0x0800037c   Section        8  libspace.o(.text)
+    .text                                    0x08000384   Section        0  sys_exit.o(.text)
+    .text                                    0x08000390   Section        2  use_no_semi.o(.text)
+    .text                                    0x08000392   Section        0  indicate_semi.o(.text)
+    i.AD7610ConvertData                      0x080003b0   Section        0  ad7610.o(i.AD7610ConvertData)
+    i.AD7610GetConfig                        0x08000420   Section        0  ad7610.o(i.AD7610GetConfig)
+    i.AD7610ReadConfig                       0x080004a0   Section        0  ad7610.o(i.AD7610ReadConfig)
+    i.AD7610SaveConfig                       0x080004ac   Section        0  ad7610.o(i.AD7610SaveConfig)
+    i.AD7610SetConfig                        0x080004d4   Section        0  ad7610.o(i.AD7610SetConfig)
+    i.ADCInit                                0x08000524   Section        0  ad7610.o(i.ADCInit)
+    i.ADG439Init                             0x08000628   Section        0  adg439.o(i.ADG439Init)
+    i.ADG439OnCh                             0x08000660   Section        0  adg439.o(i.ADG439OnCh)
+    i.GetVaSN                                0x08000684   Section        0  icpanibul.o(i.GetVaSN)
+    GetVaSN                                  0x08000685   Thumb Code    50  icpanibul.o(i.GetVaSN)
+    i.Icpanibul                              0x080006dc   Section        0  icpanibul.o(i.Icpanibul)
+    i.PORT_DeInit                            0x080007fc   Section        0  mdr32f9qx_port.o(i.PORT_DeInit)
+    i.PORT_Init                              0x08000810   Section        0  mdr32f9qx_port.o(i.PORT_Init)
+    i.RST_CLK_PCLKcmd                        0x080009d8   Section        0  mdr32f9qx_rst_clk.o(i.RST_CLK_PCLKcmd)
+    i.ReadConfig                             0x080009f8   Section        0  icpanibul.o(i.ReadConfig)
+    ReadConfig                               0x080009f9   Thumb Code    28  icpanibul.o(i.ReadConfig)
+    i.RingQueGet                             0x08000a14   Section        0  ringqueue.o(i.RingQueGet)
+    i.RingQueInit                            0x08000a70   Section        0  ringqueue.o(i.RingQueInit)
+    i.RingQuePut                             0x08000a7e   Section        0  ringqueue.o(i.RingQuePut)
+    i.SPIInit                                0x08000ae0   Section        0  spi.o(i.SPIInit)
+    i.SSP_BRGInit                            0x08000bb4   Section        0  mdr32f9qx_ssp.o(i.SSP_BRGInit)
+    i.SSP_Cmd                                0x08000bf0   Section        0  mdr32f9qx_ssp.o(i.SSP_Cmd)
+    i.SSP_DeInit                             0x08000c08   Section        0  mdr32f9qx_ssp.o(i.SSP_DeInit)
+    i.SSP_Init                               0x08000c1a   Section        0  mdr32f9qx_ssp.o(i.SSP_Init)
+    i.SSP_ReceiveData                        0x08000c40   Section        0  mdr32f9qx_ssp.o(i.SSP_ReceiveData)
+    i.SSP_SendData                           0x08000c48   Section        0  mdr32f9qx_ssp.o(i.SSP_SendData)
+    i.SaveConfig                             0x08000c4c   Section        0  icpanibul.o(i.SaveConfig)
+    SaveConfig                               0x08000c4d   Thumb Code    22  icpanibul.o(i.SaveConfig)
+    i.SetConfig                              0x08000c64   Section        0  icpanibul.o(i.SetConfig)
+    SetConfig                                0x08000c65   Thumb Code    58  icpanibul.o(i.SetConfig)
+    i.SetSysClock                            0x08000ca8   Section        0  system_mdr32f9qx.o(i.SetSysClock)
+    SetSysClock                              0x08000ca9   Thumb Code   246  system_mdr32f9qx.o(i.SetSysClock)
+    i.Setup_USB                              0x08000da8   Section        0  vcom_config.o(i.Setup_USB)
+    i.SysTick_Handler                        0x08000de8   Section        0  systick.o(i.SysTick_Handler)
+    i.SystemCoreClockUpdate                  0x08000e28   Section        0  system_mdr32f9qx.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x08000eb8   Section        0  system_mdr32f9qx.o(i.SystemInit)
+    i.TIMER3_ETR_Setup                       0x08000efc   Section        0  ad7610.o(i.TIMER3_ETR_Setup)
+    i.Timer3_IRQHandler                      0x08000f48   Section        0  ad7610.o(i.Timer3_IRQHandler)
+    i.USB_BRGInit                            0x08000f9c   Section        0  mdr32f9qx_usb.o(i.USB_BRGInit)
+    i.USB_CDC_ClassRequest                   0x08000fd8   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest)
+    i.USB_CDC_DoDataOut                      0x08001078   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut)
+    USB_CDC_DoDataOut                        0x08001079   Thumb Code    60  mdr32f9qx_usb_cdc.o(i.USB_CDC_DoDataOut)
+    i.USB_CDC_GetDescriptor                  0x080010b8   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor)
+    i.USB_CDC_GetLineCoding                  0x0800116c   Section        0  vcom_config.o(i.USB_CDC_GetLineCoding)
+    i.USB_CDC_Init                           0x08001184   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_Init)
+    i.USB_CDC_OnDataReceive                  0x080011b0   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive)
+    USB_CDC_OnDataReceive                    0x080011b1   Thumb Code    58  mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataReceive)
+    i.USB_CDC_OnDataSent                     0x080011f4   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataSent)
+    USB_CDC_OnDataSent                       0x080011f5   Thumb Code    12  mdr32f9qx_usb_cdc.o(i.USB_CDC_OnDataSent)
+    i.USB_CDC_RecieveData                    0x08001204   Section        0  vcom_config.o(i.USB_CDC_RecieveData)
+    i.USB_CDC_Reset                          0x0800123c   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset)
+    i.USB_CDC_SendData                       0x08001288   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData)
+    i.USB_CDC_SetLineCoding                  0x080012b8   Section        0  vcom_config.o(i.USB_CDC_SetLineCoding)
+    i.USB_CDC_SetReceiveBuffer               0x080012d4   Section        0  mdr32f9qx_usb_cdc.o(i.USB_CDC_SetReceiveBuffer)
+    i.USB_DeviceClearFeature                 0x080012e4   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceClearFeature)
+    i.USB_DeviceDispatchEvent                0x08001300   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent)
+    i.USB_DeviceDoStatusOutAck               0x0800134c   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusOutAck)
+    i.USB_DeviceInit                         0x08001364   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceInit)
+    i.USB_DevicePowerOn                      0x080013bc   Section        0  mdr32f9qx_usb_device.o(i.USB_DevicePowerOn)
+    i.USB_DeviceReset                        0x080013d4   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceReset)
+    i.USB_DeviceSetFeature                   0x080013e4   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceSetFeature)
+    i.USB_DeviceSetupPacket                  0x08001400   Section        0  mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket)
+    i.USB_DeviceSetupPacket_Debug            0x08001664   Section        0  vcom_config.o(i.USB_DeviceSetupPacket_Debug)
+    i.USB_Device_setAddressWork              0x080016bc   Section        0  mdr32f9qx_usb_device.o(i.USB_Device_setAddressWork)
+    USB_Device_setAddressWork                0x080016bd   Thumb Code    36  mdr32f9qx_usb_device.o(i.USB_Device_setAddressWork)
+    i.USB_EP_Idle                            0x080016e4   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_Idle)
+    i.USB_EP_Init                            0x08001724   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_Init)
+    i.USB_EP_SetReady                        0x0800176c   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_SetReady)
+    USB_EP_SetReady                          0x0800176d   Thumb Code    40  mdr32f9qx_usb_device.o(i.USB_EP_SetReady)
+    i.USB_EP_Stall                           0x08001798   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_Stall)
+    i.USB_EP_dispatchEvent                   0x080017dc   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent)
+    i.USB_EP_doDataIn                        0x08001a44   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_doDataIn)
+    i.USB_EP_doDataOut                       0x08001a90   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_doDataOut)
+    i.USB_EP_sendInDataPortion               0x08001acc   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion)
+    USB_EP_sendInDataPortion                 0x08001acd   Thumb Code   120  mdr32f9qx_usb_device.o(i.USB_EP_sendInDataPortion)
+    i.USB_EP_setSetupHandler                 0x08001b48   Section        0  mdr32f9qx_usb_device.o(i.USB_EP_setSetupHandler)
+    i.USB_GetSA                              0x08001b88   Section        0  mdr32f9qx_usb.o(i.USB_GetSA)
+    i.USB_GetSEPxCTRL                        0x08001b94   Section        0  mdr32f9qx_usb.o(i.USB_GetSEPxCTRL)
+    i.USB_GetSEPxRXFD                        0x08001ba4   Section        0  mdr32f9qx_usb.o(i.USB_GetSEPxRXFD)
+    i.USB_GetSEPxRXFDC                       0x08001bb4   Section        0  mdr32f9qx_usb.o(i.USB_GetSEPxRXFDC)
+    i.USB_GetSEPxSTS                         0x08001bc4   Section        0  mdr32f9qx_usb.o(i.USB_GetSEPxSTS)
+    i.USB_GetSEPxTS                          0x08001bd4   Section        0  mdr32f9qx_usb.o(i.USB_GetSEPxTS)
+    i.USB_GetSIS                             0x08001be4   Section        0  mdr32f9qx_usb.o(i.USB_GetSIS)
+    i.USB_Reset                              0x08001bf0   Section        0  mdr32f9qx_usb.o(i.USB_Reset)
+    i.USB_SEPxToggleEPDATASEQ                0x08001c10   Section        0  mdr32f9qx_usb.o(i.USB_SEPxToggleEPDATASEQ)
+    i.USB_SetHSCR                            0x08001c2c   Section        0  mdr32f9qx_usb.o(i.USB_SetHSCR)
+    i.USB_SetSA                              0x08001c4c   Section        0  mdr32f9qx_usb.o(i.USB_SetSA)
+    i.USB_SetSC                              0x08001c58   Section        0  mdr32f9qx_usb.o(i.USB_SetSC)
+    i.USB_SetSEPxCTRL                        0x08001c78   Section        0  mdr32f9qx_usb.o(i.USB_SetSEPxCTRL)
+    i.USB_SetSEPxRXFC                        0x08001ca4   Section        0  mdr32f9qx_usb.o(i.USB_SetSEPxRXFC)
+    i.USB_SetSEPxTXFD                        0x08001cb4   Section        0  mdr32f9qx_usb.o(i.USB_SetSEPxTXFD)
+    i.USB_SetSEPxTXFDC                       0x08001cc4   Section        0  mdr32f9qx_usb.o(i.USB_SetSEPxTXFDC)
+    i.USB_SetSIM                             0x08001cd4   Section        0  mdr32f9qx_usb.o(i.USB_SetSIM)
+    i.USB_SetSIS                             0x08001cf4   Section        0  mdr32f9qx_usb.o(i.USB_SetSIS)
+    i.VCom_Configuration                     0x08001d00   Section        0  vcom_config.o(i.VCom_Configuration)
+    i.main                                   0x08001d18   Section        0  main.o(i.main)
+    i.min                                    0x08001d54   Section        0  ringqueue.o(i.min)
+    min                                      0x08001d55   Thumb Code    16  ringqueue.o(i.min)
+    i.uiAscii2byte                           0x08001d64   Section        0  utility.o(i.uiAscii2byte)
+    i.EEPROM_ErasePage                       0x20000000   Section        0  mdr32f9qx_eeprom.o(i.EEPROM_ErasePage)
+    i.EEPROM_ProgramByte                     0x20000090   Section        0  mdr32f9qx_eeprom.o(i.EEPROM_ProgramByte)
+    i.EEPROM_ProgramWord                     0x200000c8   Section        0  mdr32f9qx_eeprom.o(i.EEPROM_ProgramWord)
+    i.EEPROM_ReadByte                        0x2000015c   Section        0  mdr32f9qx_eeprom.o(i.EEPROM_ReadByte)
+    i.EEPROM_ReadWord                        0x200001b8   Section        0  mdr32f9qx_eeprom.o(i.EEPROM_ReadWord)
+    i.ProgramDelay                           0x2000020c   Section        0  mdr32f9qx_eeprom.o(i.ProgramDelay)
+    ProgramDelay                             0x2000020d   Thumb Code    20  mdr32f9qx_eeprom.o(i.ProgramDelay)
+    .data                                    0x20000220   Section        4  system_mdr32f9qx.o(.data)
+    .data                                    0x20000224   Section       32  vcom_config.o(.data)
+    LineCoding                               0x2000022c   Data           8  vcom_config.o(.data)
+    SPIndex                                  0x20000234   Data           4  vcom_config.o(.data)
+    ReceivedByteCount                        0x20000238   Data           4  vcom_config.o(.data)
+    SentByteCount                            0x2000023c   Data           4  vcom_config.o(.data)
+    SkippedByteCount                         0x20000240   Data           4  vcom_config.o(.data)
+    .data                                    0x20000244   Section       46  adg439.o(.data)
+    .data                                    0x20000272   Section        6  ad7610.o(.data)
+    AD7610_SCP                               0x20000272   Data           2  ad7610.o(.data)
+    data_ssp2                                0x20000274   Data           2  ad7610.o(.data)
+    new_data                                 0x20000276   Data           1  ad7610.o(.data)
+    old_ch                                   0x20000277   Data           1  ad7610.o(.data)
+    .data                                    0x20000278   Section      160  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_Device_Descriptor                0x20000278   Data          18  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_Configuration_Descriptor         0x2000028a   Data          67  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_String_Descriptor                0x200002cd   Data           4  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_String_Descriptor_iM             0x200002d1   Data          18  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_String_Descriptor_iP             0x200002e3   Data          18  mdr32f9qx_usb_cdc.o(.data)
+    Usb_CDC_String_Descriptor_SN             0x200002f5   Data          26  mdr32f9qx_usb_cdc.o(.data)
+    CDC_ClassPacketData                      0x20000310   Data           8  mdr32f9qx_usb_cdc.o(.data)
+    .data                                    0x20000318   Section       16  mdr32f9qx_usb_device.o(.data)
+    SetupPacketData                          0x20000320   Data           2  mdr32f9qx_usb_device.o(.data)
+    bHandling                                0x20000324   Data           4  mdr32f9qx_usb_device.o(.data)
+    .data                                    0x20000328   Section        8  systick.o(.data)
+    .data                                    0x20000330   Section        6  icpanibul.o(.data)
+    bytes                                    0x20000330   Data           1  icpanibul.o(.data)
+    .bss                                     0x20000338   Section     1112  main.o(.bss)
+    Buffer                                   0x20000344   Data         100  main.o(.bss)
+    .bss                                     0x20000790   Section     1212  vcom_config.o(.bss)
+    SetupPackets                             0x2000079c   Data        1200  vcom_config.o(.bss)
+    .bss                                     0x20000c4c   Section       12  mdr32f9qx_usb_cdc.o(.bss)
+    USB_CDCContext                           0x20000c4c   Data          12  mdr32f9qx_usb_cdc.o(.bss)
+    .bss                                     0x20000c58   Section      188  mdr32f9qx_usb_device.o(.bss)
+    .bss                                     0x20000d14   Section      100  icpanibul.o(.bss)
+    tmp                                      0x20000d14   Data         100  icpanibul.o(.bss)
+    .bss                                     0x20000d78   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000dd8   Section      512  startup_mdr32f9qx.o(HEAP)
+    Heap_Mem                                 0x20000dd8   Data         512  startup_mdr32f9qx.o(HEAP)
+    STACK                                    0x20000fd8   Section     1024  startup_mdr32f9qx.o(STACK)
+    Stack_Mem                                0x20000fd8   Data        1024  startup_mdr32f9qx.o(STACK)
+    __initial_sp                             0x200013d8   Data           0  startup_mdr32f9qx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  printf_stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  printf_stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  printf_stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  printf_stubs.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  startup_mdr32f9qx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_mdr32f9qx.o(RESET)
+    __Vectors_End                            0x080000c0   Data           0  startup_mdr32f9qx.o(RESET)
+    __main                                   0x080000c1   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x080000c9   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x080000d7   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x080000fd   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x08000119   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x08000135   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x08000137   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x08000139   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x0800013b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x0800013d   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x0800013d   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x0800013d   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x08000143   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x08000143   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000147   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000147   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0800014f   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x08000151   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x08000151   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x08000155   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x0800015d   Thumb Code     8  startup_mdr32f9qx.o(.text)
+    NMI_Handler                              0x08000165   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    HardFault_Handler                        0x08000167   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    MemManage_Handler                        0x08000169   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    BusFault_Handler                         0x0800016b   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    UsageFault_Handler                       0x0800016d   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    SVC_Handler                              0x0800016f   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    DebugMon_Handler                         0x08000171   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    PendSV_Handler                           0x08000173   Thumb Code     2  startup_mdr32f9qx.o(.text)
+    ADC_IRQHandler                           0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    BACKUP_IRQHandler                        0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    CAN1_IRQHandler                          0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    CAN2_IRQHandler                          0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    COMPARATOR_IRQHandler                    0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    DMA_IRQHandler                           0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    EXT_INT1_IRQHandler                      0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    EXT_INT2_IRQHandler                      0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    EXT_INT3_IRQHandler                      0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    EXT_INT4_IRQHandler                      0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    I2C_IRQHandler                           0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    POWER_IRQHandler                         0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    SSP1_IRQHandler                          0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    SSP2_IRQHandler                          0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    Timer1_IRQHandler                        0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    Timer2_IRQHandler                        0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    UART1_IRQHandler                         0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    UART2_IRQHandler                         0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    USB_IRQHandler                           0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    WWDG_IRQHandler                          0x08000177   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    __user_initial_stackheap                 0x08000179   Thumb Code     0  startup_mdr32f9qx.o(.text)
+    __2sprintf                               0x0800019d   Thumb Code    38  __2sprintf.o(.text)
+    __aeabi_memcpy                           0x080001c9   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x080001c9   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x0800022f   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __use_two_region_memory                  0x08000253   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x08000255   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000257   Thumb Code     2  heapauxi.o(.text)
+    _printf_char_common                      0x08000263   Thumb Code    32  _printf_char_common.o(.text)
+    _sputc                                   0x08000289   Thumb Code    10  _sputc.o(.text)
+    __aeabi_memcpy4                          0x08000293   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x08000293   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x08000293   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x080002db   Thumb Code     0  rt_memcpy_w.o(.text)
+    __printf                                 0x080002f7   Thumb Code    40  __printf_nopercent.o(.text)
+    __user_setup_stackheap                   0x0800031f   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x08000369   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x0800037d   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x0800037d   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x0800037d   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x08000385   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x08000391   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000391   Thumb Code     2  use_no_semi.o(.text)
+    Long Thumb to Thumb Veneer to EEPROM_ReadByte 0x08000393   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    __semihosting_library_function           0x08000393   Thumb Code     0  indicate_semi.o(.text)
+    Long Thumb to Thumb Veneer to EEPROM_ErasePage 0x0800039d   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to EEPROM_ProgramByte 0x080003a7   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    AD7610ConvertData                        0x080003b1   Thumb Code    90  ad7610.o(i.AD7610ConvertData)
+    AD7610GetConfig                          0x08000421   Thumb Code   120  ad7610.o(i.AD7610GetConfig)
+    AD7610ReadConfig                         0x080004a1   Thumb Code     6  ad7610.o(i.AD7610ReadConfig)
+    AD7610SaveConfig                         0x080004ad   Thumb Code    30  ad7610.o(i.AD7610SaveConfig)
+    AD7610SetConfig                          0x080004d5   Thumb Code    70  ad7610.o(i.AD7610SetConfig)
+    ADCInit                                  0x08000525   Thumb Code   242  ad7610.o(i.ADCInit)
+    ADG439Init                               0x08000629   Thumb Code    52  adg439.o(i.ADG439Init)
+    ADG439OnCh                               0x08000661   Thumb Code    28  adg439.o(i.ADG439OnCh)
+    Icpanibul                                0x080006dd   Thumb Code   262  icpanibul.o(i.Icpanibul)
+    PORT_DeInit                              0x080007fd   Thumb Code    20  mdr32f9qx_port.o(i.PORT_DeInit)
+    PORT_Init                                0x08000811   Thumb Code   450  mdr32f9qx_port.o(i.PORT_Init)
+    RST_CLK_PCLKcmd                          0x080009d9   Thumb Code    26  mdr32f9qx_rst_clk.o(i.RST_CLK_PCLKcmd)
+    RingQueGet                               0x08000a15   Thumb Code    92  ringqueue.o(i.RingQueGet)
+    RingQueInit                              0x08000a71   Thumb Code    14  ringqueue.o(i.RingQueInit)
+    RingQuePut                               0x08000a7f   Thumb Code    96  ringqueue.o(i.RingQuePut)
+    SPIInit                                  0x08000ae1   Thumb Code   198  spi.o(i.SPIInit)
+    SSP_BRGInit                              0x08000bb5   Thumb Code    48  mdr32f9qx_ssp.o(i.SSP_BRGInit)
+    SSP_Cmd                                  0x08000bf1   Thumb Code    24  mdr32f9qx_ssp.o(i.SSP_Cmd)
+    SSP_DeInit                               0x08000c09   Thumb Code    18  mdr32f9qx_ssp.o(i.SSP_DeInit)
+    SSP_Init                                 0x08000c1b   Thumb Code    38  mdr32f9qx_ssp.o(i.SSP_Init)
+    SSP_ReceiveData                          0x08000c41   Thumb Code     8  mdr32f9qx_ssp.o(i.SSP_ReceiveData)
+    SSP_SendData                             0x08000c49   Thumb Code     4  mdr32f9qx_ssp.o(i.SSP_SendData)
+    Setup_USB                                0x08000da9   Thumb Code    56  vcom_config.o(i.Setup_USB)
+    SysTick_Handler                          0x08000de9   Thumb Code    50  systick.o(i.SysTick_Handler)
+    SystemCoreClockUpdate                    0x08000e29   Thumb Code   130  system_mdr32f9qx.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x08000eb9   Thumb Code    58  system_mdr32f9qx.o(i.SystemInit)
+    TIMER3_ETR_Setup                         0x08000efd   Thumb Code    68  ad7610.o(i.TIMER3_ETR_Setup)
+    Timer3_IRQHandler                        0x08000f49   Thumb Code    64  ad7610.o(i.Timer3_IRQHandler)
+    USB_BRGInit                              0x08000f9d   Thumb Code    54  mdr32f9qx_usb.o(i.USB_BRGInit)
+    USB_CDC_ClassRequest                     0x08000fd9   Thumb Code   142  mdr32f9qx_usb_cdc.o(i.USB_CDC_ClassRequest)
+    USB_CDC_GetDescriptor                    0x080010b9   Thumb Code   152  mdr32f9qx_usb_cdc.o(i.USB_CDC_GetDescriptor)
+    USB_CDC_GetLineCoding                    0x0800116d   Thumb Code    20  vcom_config.o(i.USB_CDC_GetLineCoding)
+    USB_CDC_Init                             0x08001185   Thumb Code    38  mdr32f9qx_usb_cdc.o(i.USB_CDC_Init)
+    USB_CDC_RecieveData                      0x08001205   Thumb Code    42  vcom_config.o(i.USB_CDC_RecieveData)
+    USB_CDC_Reset                            0x0800123d   Thumb Code    66  mdr32f9qx_usb_cdc.o(i.USB_CDC_Reset)
+    USB_CDC_SendData                         0x08001289   Thumb Code    38  mdr32f9qx_usb_cdc.o(i.USB_CDC_SendData)
+    USB_CDC_SetLineCoding                    0x080012b9   Thumb Code    22  vcom_config.o(i.USB_CDC_SetLineCoding)
+    USB_CDC_SetReceiveBuffer                 0x080012d5   Thumb Code    12  mdr32f9qx_usb_cdc.o(i.USB_CDC_SetReceiveBuffer)
+    USB_DeviceClearFeature                   0x080012e5   Thumb Code    26  mdr32f9qx_usb_device.o(i.USB_DeviceClearFeature)
+    USB_DeviceDispatchEvent                  0x08001301   Thumb Code    70  mdr32f9qx_usb_device.o(i.USB_DeviceDispatchEvent)
+    USB_DeviceDoStatusOutAck                 0x0800134d   Thumb Code    22  mdr32f9qx_usb_device.o(i.USB_DeviceDoStatusOutAck)
+    USB_DeviceInit                           0x08001365   Thumb Code    74  mdr32f9qx_usb_device.o(i.USB_DeviceInit)
+    USB_DevicePowerOn                        0x080013bd   Thumb Code    18  mdr32f9qx_usb_device.o(i.USB_DevicePowerOn)
+    USB_DeviceReset                          0x080013d5   Thumb Code    10  mdr32f9qx_usb_device.o(i.USB_DeviceReset)
+    USB_DeviceSetFeature                     0x080013e5   Thumb Code    28  mdr32f9qx_usb_device.o(i.USB_DeviceSetFeature)
+    USB_DeviceSetupPacket                    0x08001401   Thumb Code   596  mdr32f9qx_usb_device.o(i.USB_DeviceSetupPacket)
+    USB_DeviceSetupPacket_Debug              0x08001665   Thumb Code    80  vcom_config.o(i.USB_DeviceSetupPacket_Debug)
+    USB_EP_Idle                              0x080016e5   Thumb Code    60  mdr32f9qx_usb_device.o(i.USB_EP_Idle)
+    USB_EP_Init                              0x08001725   Thumb Code    66  mdr32f9qx_usb_device.o(i.USB_EP_Init)
+    USB_EP_Stall                             0x08001799   Thumb Code    64  mdr32f9qx_usb_device.o(i.USB_EP_Stall)
+    USB_EP_dispatchEvent                     0x080017dd   Thumb Code   606  mdr32f9qx_usb_device.o(i.USB_EP_dispatchEvent)
+    USB_EP_doDataIn                          0x08001a45   Thumb Code    72  mdr32f9qx_usb_device.o(i.USB_EP_doDataIn)
+    USB_EP_doDataOut                         0x08001a91   Thumb Code    56  mdr32f9qx_usb_device.o(i.USB_EP_doDataOut)
+    USB_EP_setSetupHandler                   0x08001b49   Thumb Code    58  mdr32f9qx_usb_device.o(i.USB_EP_setSetupHandler)
+    USB_GetSA                                0x08001b89   Thumb Code     6  mdr32f9qx_usb.o(i.USB_GetSA)
+    USB_GetSEPxCTRL                          0x08001b95   Thumb Code    12  mdr32f9qx_usb.o(i.USB_GetSEPxCTRL)
+    USB_GetSEPxRXFD                          0x08001ba5   Thumb Code    12  mdr32f9qx_usb.o(i.USB_GetSEPxRXFD)
+    USB_GetSEPxRXFDC                         0x08001bb5   Thumb Code    12  mdr32f9qx_usb.o(i.USB_GetSEPxRXFDC)
+    USB_GetSEPxSTS                           0x08001bc5   Thumb Code    12  mdr32f9qx_usb.o(i.USB_GetSEPxSTS)
+    USB_GetSEPxTS                            0x08001bd5   Thumb Code    12  mdr32f9qx_usb.o(i.USB_GetSEPxTS)
+    USB_GetSIS                               0x08001be5   Thumb Code     6  mdr32f9qx_usb.o(i.USB_GetSIS)
+    USB_Reset                                0x08001bf1   Thumb Code    30  mdr32f9qx_usb.o(i.USB_Reset)
+    USB_SEPxToggleEPDATASEQ                  0x08001c11   Thumb Code    22  mdr32f9qx_usb.o(i.USB_SEPxToggleEPDATASEQ)
+    USB_SetHSCR                              0x08001c2d   Thumb Code    24  mdr32f9qx_usb.o(i.USB_SetHSCR)
+    USB_SetSA                                0x08001c4d   Thumb Code     6  mdr32f9qx_usb.o(i.USB_SetSA)
+    USB_SetSC                                0x08001c59   Thumb Code    24  mdr32f9qx_usb.o(i.USB_SetSC)
+    USB_SetSEPxCTRL                          0x08001c79   Thumb Code    34  mdr32f9qx_usb.o(i.USB_SetSEPxCTRL)
+    USB_SetSEPxRXFC                          0x08001ca5   Thumb Code    10  mdr32f9qx_usb.o(i.USB_SetSEPxRXFC)
+    USB_SetSEPxTXFD                          0x08001cb5   Thumb Code    10  mdr32f9qx_usb.o(i.USB_SetSEPxTXFD)
+    USB_SetSEPxTXFDC                         0x08001cc5   Thumb Code    10  mdr32f9qx_usb.o(i.USB_SetSEPxTXFDC)
+    USB_SetSIM                               0x08001cd5   Thumb Code    24  mdr32f9qx_usb.o(i.USB_SetSIM)
+    USB_SetSIS                               0x08001cf5   Thumb Code     6  mdr32f9qx_usb.o(i.USB_SetSIS)
+    VCom_Configuration                       0x08001d01   Thumb Code    20  vcom_config.o(i.VCom_Configuration)
+    main                                     0x08001d19   Thumb Code    46  main.o(i.main)
+    uiAscii2byte                             0x08001d65   Thumb Code    34  utility.o(i.uiAscii2byte)
+    Region$$Table$$Base                      0x08001d88   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001db8   Number         0  anon$$obj.o(Region$$Table)
+    EEPROM_ErasePage                         0x20000001   Thumb Code   136  mdr32f9qx_eeprom.o(i.EEPROM_ErasePage)
+    EEPROM_ProgramByte                       0x20000091   Thumb Code    56  mdr32f9qx_eeprom.o(i.EEPROM_ProgramByte)
+    EEPROM_ProgramWord                       0x200000c9   Thumb Code   140  mdr32f9qx_eeprom.o(i.EEPROM_ProgramWord)
+    EEPROM_ReadByte                          0x2000015d   Thumb Code    84  mdr32f9qx_eeprom.o(i.EEPROM_ReadByte)
+    EEPROM_ReadWord                          0x200001b9   Thumb Code    76  mdr32f9qx_eeprom.o(i.EEPROM_ReadWord)
+    SystemCoreClock                          0x20000220   Data           4  system_mdr32f9qx.o(.data)
+    USB_Clock_InitStruct                     0x20000224   Data           8  vcom_config.o(.data)
+    chanels                                  0x20000244   Data          46  adg439.o(.data)
+    USB_CurrentSetupPacket                   0x20000318   Data           8  mdr32f9qx_usb_device.o(.data)
+    TimingDelay_ms                           0x20000328   Data           4  systick.o(.data)
+    Ticks                                    0x2000032c   Data           4  systick.o(.data)
+    cnt                                      0x20000332   Data           2  icpanibul.o(.data)
+    tmp1                                     0x20000334   Data           2  icpanibul.o(.data)
+    QueUSB                                   0x20000338   Data          12  main.o(.bss)
+    RingBufferUSB                            0x200003a8   Data        1000  main.o(.bss)
+    USB_DeviceBUSParam                       0x20000790   Data          12  vcom_config.o(.bss)
+    USB_EPContext                            0x20000c58   Data         176  mdr32f9qx_usb_device.o(.bss)
+    USB_DeviceContext                        0x20000d08   Data          12  mdr32f9qx_usb_device.o(.bss)
+    __libspace_start                         0x20000d78   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000dd8   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000c1
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000020f0, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001db8, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000c0   Data   RO           50    RESET               startup_mdr32f9qx.o
+    0x080000c0   0x080000c0   0x00000008   Code   RO         1895  * !!!main             c_w.l(__main.o)
+    0x080000c8   0x080000c8   0x00000034   Code   RO         2060    !!!scatter          c_w.l(__scatter.o)
+    0x080000fc   0x080000fc   0x0000001a   Code   RO         2062    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000116   0x08000116   0x00000002   PAD
+    0x08000118   0x08000118   0x0000001c   Code   RO         2064    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000134   0x08000134   0x00000002   Code   RO         1930    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1937    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1939    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1942    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1944    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1946    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1949    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1951    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1953    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1955    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1957    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1959    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1961    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1963    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1965    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1967    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1969    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1973    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1975    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1977    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO         1979    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000002   Code   RO         1980    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000138   0x08000138   0x00000002   Code   RO         2000    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2013    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2015    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2018    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2021    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2023    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO         2026    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000002   Code   RO         2027    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x0800013c   0x0800013c   0x00000000   Code   RO         1897    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0800013c   0x0800013c   0x00000000   Code   RO         1905    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0800013c   0x0800013c   0x00000006   Code   RO         1917    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000142   0x08000142   0x00000000   Code   RO         1907    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000142   0x08000142   0x00000004   Code   RO         1908    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000146   0x08000146   0x00000000   Code   RO         1910    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000146   0x08000146   0x00000008   Code   RO         1911    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800014e   0x0800014e   0x00000002   Code   RO         1934    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000150   0x08000150   0x00000000   Code   RO         1982    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000150   0x08000150   0x00000004   Code   RO         1983    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000154   0x08000154   0x00000006   Code   RO         1984    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x0800015a   0x0800015a   0x00000002   PAD
+    0x0800015c   0x0800015c   0x00000040   Code   RO           51    .text               startup_mdr32f9qx.o
+    0x0800019c   0x0800019c   0x0000002c   Code   RO         1887    .text               c_w.l(__2sprintf.o)
+    0x080001c8   0x080001c8   0x0000008a   Code   RO         1891    .text               c_w.l(rt_memcpy_v6.o)
+    0x08000252   0x08000252   0x00000006   Code   RO         1893    .text               c_w.l(heapauxi.o)
+    0x08000258   0x08000258   0x00000030   Code   RO         1898    .text               c_w.l(_printf_char_common.o)
+    0x08000288   0x08000288   0x0000000a   Code   RO         1900    .text               c_w.l(_sputc.o)
+    0x08000292   0x08000292   0x00000064   Code   RO         1902    .text               c_w.l(rt_memcpy_w.o)
+    0x080002f6   0x080002f6   0x00000028   Code   RO         1919    .text               c_w.l(__printf_nopercent.o)
+    0x0800031e   0x0800031e   0x0000004a   Code   RO         1921    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000368   0x08000368   0x00000012   Code   RO         1923    .text               c_w.l(exit.o)
+    0x0800037a   0x0800037a   0x00000002   PAD
+    0x0800037c   0x0800037c   0x00000008   Code   RO         1931    .text               c_w.l(libspace.o)
+    0x08000384   0x08000384   0x0000000c   Code   RO         1992    .text               c_w.l(sys_exit.o)
+    0x08000390   0x08000390   0x00000002   Code   RO         2003    .text               c_w.l(use_no_semi.o)
+    0x08000392   0x08000392   0x00000000   Code   RO         2005    .text               c_w.l(indicate_semi.o)
+    0x08000392   0x08000392   0x0000000a   Ven    RO         2066    Veneer$$Code        anon$$obj.o
+    0x0800039c   0x0800039c   0x0000000a   Ven    RO         2067    Veneer$$Code        anon$$obj.o
+    0x080003a6   0x080003a6   0x0000000a   Ven    RO         2068    Veneer$$Code        anon$$obj.o
+    0x080003b0   0x080003b0   0x00000070   Code   RO          198    i.AD7610ConvertData  ad7610.o
+    0x08000420   0x08000420   0x00000080   Code   RO          199    i.AD7610GetConfig   ad7610.o
+    0x080004a0   0x080004a0   0x0000000c   Code   RO          200    i.AD7610ReadConfig  ad7610.o
+    0x080004ac   0x080004ac   0x00000028   Code   RO          201    i.AD7610SaveConfig  ad7610.o
+    0x080004d4   0x080004d4   0x00000050   Code   RO          202    i.AD7610SetConfig   ad7610.o
+    0x08000524   0x08000524   0x00000104   Code   RO          203    i.ADCInit           ad7610.o
+    0x08000628   0x08000628   0x00000038   Code   RO          174    i.ADG439Init        adg439.o
+    0x08000660   0x08000660   0x00000024   Code   RO          175    i.ADG439OnCh        adg439.o
+    0x08000684   0x08000684   0x00000058   Code   RO         1742    i.GetVaSN           icpanibul.o
+    0x080006dc   0x080006dc   0x00000120   Code   RO         1743    i.Icpanibul         icpanibul.o
+    0x080007fc   0x080007fc   0x00000014   Code   RO          332    i.PORT_DeInit       mdr32f9qx_port.o
+    0x08000810   0x08000810   0x000001c8   Code   RO          333    i.PORT_Init         mdr32f9qx_port.o
+    0x080009d8   0x080009d8   0x00000020   Code   RO          416    i.RST_CLK_PCLKcmd   mdr32f9qx_rst_clk.o
+    0x080009f8   0x080009f8   0x0000001c   Code   RO         1744    i.ReadConfig        icpanibul.o
+    0x08000a14   0x08000a14   0x0000005c   Code   RO         1792    i.RingQueGet        ringqueue.o
+    0x08000a70   0x08000a70   0x0000000e   Code   RO         1793    i.RingQueInit       ringqueue.o
+    0x08000a7e   0x08000a7e   0x00000060   Code   RO         1794    i.RingQuePut        ringqueue.o
+    0x08000ade   0x08000ade   0x00000002   PAD
+    0x08000ae0   0x08000ae0   0x000000d4   Code   RO         1845    i.SPIInit           spi.o
+    0x08000bb4   0x08000bb4   0x0000003c   Code   RO          602    i.SSP_BRGInit       mdr32f9qx_ssp.o
+    0x08000bf0   0x08000bf0   0x00000018   Code   RO          604    i.SSP_Cmd           mdr32f9qx_ssp.o
+    0x08000c08   0x08000c08   0x00000012   Code   RO          606    i.SSP_DeInit        mdr32f9qx_ssp.o
+    0x08000c1a   0x08000c1a   0x00000026   Code   RO          611    i.SSP_Init          mdr32f9qx_ssp.o
+    0x08000c40   0x08000c40   0x00000008   Code   RO          612    i.SSP_ReceiveData   mdr32f9qx_ssp.o
+    0x08000c48   0x08000c48   0x00000004   Code   RO          613    i.SSP_SendData      mdr32f9qx_ssp.o
+    0x08000c4c   0x08000c4c   0x00000016   Code   RO         1745    i.SaveConfig        icpanibul.o
+    0x08000c62   0x08000c62   0x00000002   PAD
+    0x08000c64   0x08000c64   0x00000044   Code   RO         1746    i.SetConfig         icpanibul.o
+    0x08000ca8   0x08000ca8   0x00000100   Code   RO            1    i.SetSysClock       system_mdr32f9qx.o
+    0x08000da8   0x08000da8   0x00000040   Code   RO          120    i.Setup_USB         vcom_config.o
+    0x08000de8   0x08000de8   0x00000040   Code   RO         1720    i.SysTick_Handler   systick.o
+    0x08000e28   0x08000e28   0x00000090   Code   RO            2    i.SystemCoreClockUpdate  system_mdr32f9qx.o
+    0x08000eb8   0x08000eb8   0x00000044   Code   RO            3    i.SystemInit        system_mdr32f9qx.o
+    0x08000efc   0x08000efc   0x0000004c   Code   RO          204    i.TIMER3_ETR_Setup  ad7610.o
+    0x08000f48   0x08000f48   0x00000054   Code   RO          205    i.Timer3_IRQHandler  ad7610.o
+    0x08000f9c   0x08000f9c   0x0000003c   Code   RO         1031    i.USB_BRGInit       mdr32f9qx_usb.o
+    0x08000fd8   0x08000fd8   0x000000a0   Code   RO         1397    i.USB_CDC_ClassRequest  mdr32f9qx_usb_cdc.o
+    0x08001078   0x08001078   0x00000040   Code   RO         1398    i.USB_CDC_DoDataOut  mdr32f9qx_usb_cdc.o
+    0x080010b8   0x080010b8   0x000000b4   Code   RO         1403    i.USB_CDC_GetDescriptor  mdr32f9qx_usb_cdc.o
+    0x0800116c   0x0800116c   0x00000018   Code   RO          121    i.USB_CDC_GetLineCoding  vcom_config.o
+    0x08001184   0x08001184   0x0000002c   Code   RO         1404    i.USB_CDC_Init      mdr32f9qx_usb_cdc.o
+    0x080011b0   0x080011b0   0x00000044   Code   RO         1405    i.USB_CDC_OnDataReceive  mdr32f9qx_usb_cdc.o
+    0x080011f4   0x080011f4   0x00000010   Code   RO         1406    i.USB_CDC_OnDataSent  mdr32f9qx_usb_cdc.o
+    0x08001204   0x08001204   0x00000038   Code   RO          122    i.USB_CDC_RecieveData  vcom_config.o
+    0x0800123c   0x0800123c   0x0000004c   Code   RO         1409    i.USB_CDC_Reset     mdr32f9qx_usb_cdc.o
+    0x08001288   0x08001288   0x00000030   Code   RO         1410    i.USB_CDC_SendData  mdr32f9qx_usb_cdc.o
+    0x080012b8   0x080012b8   0x0000001c   Code   RO          123    i.USB_CDC_SetLineCoding  vcom_config.o
+    0x080012d4   0x080012d4   0x00000010   Code   RO         1411    i.USB_CDC_SetReceiveBuffer  mdr32f9qx_usb_cdc.o
+    0x080012e4   0x080012e4   0x0000001a   Code   RO         1493    i.USB_DeviceClearFeature  mdr32f9qx_usb_device.o
+    0x080012fe   0x080012fe   0x00000002   PAD
+    0x08001300   0x08001300   0x0000004c   Code   RO         1494    i.USB_DeviceDispatchEvent  mdr32f9qx_usb_device.o
+    0x0800134c   0x0800134c   0x00000016   Code   RO         1496    i.USB_DeviceDoStatusOutAck  mdr32f9qx_usb_device.o
+    0x08001362   0x08001362   0x00000002   PAD
+    0x08001364   0x08001364   0x00000058   Code   RO         1509    i.USB_DeviceInit    mdr32f9qx_usb_device.o
+    0x080013bc   0x080013bc   0x00000018   Code   RO         1511    i.USB_DevicePowerOn  mdr32f9qx_usb_device.o
+    0x080013d4   0x080013d4   0x00000010   Code   RO         1512    i.USB_DeviceReset   mdr32f9qx_usb_device.o
+    0x080013e4   0x080013e4   0x0000001c   Code   RO         1514    i.USB_DeviceSetFeature  mdr32f9qx_usb_device.o
+    0x08001400   0x08001400   0x00000264   Code   RO         1515    i.USB_DeviceSetupPacket  mdr32f9qx_usb_device.o
+    0x08001664   0x08001664   0x00000058   Code   RO          124    i.USB_DeviceSetupPacket_Debug  vcom_config.o
+    0x080016bc   0x080016bc   0x00000028   Code   RO         1517    i.USB_Device_setAddressWork  mdr32f9qx_usb_device.o
+    0x080016e4   0x080016e4   0x00000040   Code   RO         1518    i.USB_EP_Idle       mdr32f9qx_usb_device.o
+    0x08001724   0x08001724   0x00000048   Code   RO         1519    i.USB_EP_Init       mdr32f9qx_usb_device.o
+    0x0800176c   0x0800176c   0x0000002c   Code   RO         1521    i.USB_EP_SetReady   mdr32f9qx_usb_device.o
+    0x08001798   0x08001798   0x00000044   Code   RO         1522    i.USB_EP_Stall      mdr32f9qx_usb_device.o
+    0x080017dc   0x080017dc   0x00000268   Code   RO         1523    i.USB_EP_dispatchEvent  mdr32f9qx_usb_device.o
+    0x08001a44   0x08001a44   0x0000004c   Code   RO         1524    i.USB_EP_doDataIn   mdr32f9qx_usb_device.o
+    0x08001a90   0x08001a90   0x0000003c   Code   RO         1525    i.USB_EP_doDataOut  mdr32f9qx_usb_device.o
+    0x08001acc   0x08001acc   0x0000007c   Code   RO         1526    i.USB_EP_sendInDataPortion  mdr32f9qx_usb_device.o
+    0x08001b48   0x08001b48   0x00000040   Code   RO         1527    i.USB_EP_setSetupHandler  mdr32f9qx_usb_device.o
+    0x08001b88   0x08001b88   0x0000000c   Code   RO         1054    i.USB_GetSA         mdr32f9qx_usb.o
+    0x08001b94   0x08001b94   0x00000010   Code   RO         1056    i.USB_GetSEPxCTRL   mdr32f9qx_usb.o
+    0x08001ba4   0x08001ba4   0x00000010   Code   RO         1059    i.USB_GetSEPxRXFD   mdr32f9qx_usb.o
+    0x08001bb4   0x08001bb4   0x00000010   Code   RO         1060    i.USB_GetSEPxRXFDC  mdr32f9qx_usb.o
+    0x08001bc4   0x08001bc4   0x00000010   Code   RO         1061    i.USB_GetSEPxSTS    mdr32f9qx_usb.o
+    0x08001bd4   0x08001bd4   0x00000010   Code   RO         1062    i.USB_GetSEPxTS     mdr32f9qx_usb.o
+    0x08001be4   0x08001be4   0x0000000c   Code   RO         1067    i.USB_GetSIS        mdr32f9qx_usb.o
+    0x08001bf0   0x08001bf0   0x0000001e   Code   RO         1069    i.USB_Reset         mdr32f9qx_usb.o
+    0x08001c0e   0x08001c0e   0x00000002   PAD
+    0x08001c10   0x08001c10   0x0000001c   Code   RO         1070    i.USB_SEPxToggleEPDATASEQ  mdr32f9qx_usb.o
+    0x08001c2c   0x08001c2c   0x00000020   Code   RO         1074    i.USB_SetHSCR       mdr32f9qx_usb.o
+    0x08001c4c   0x08001c4c   0x0000000c   Code   RO         1083    i.USB_SetSA         mdr32f9qx_usb.o
+    0x08001c58   0x08001c58   0x00000020   Code   RO         1084    i.USB_SetSC         mdr32f9qx_usb.o
+    0x08001c78   0x08001c78   0x0000002c   Code   RO         1085    i.USB_SetSEPxCTRL   mdr32f9qx_usb.o
+    0x08001ca4   0x08001ca4   0x00000010   Code   RO         1086    i.USB_SetSEPxRXFC   mdr32f9qx_usb.o
+    0x08001cb4   0x08001cb4   0x00000010   Code   RO         1087    i.USB_SetSEPxTXFD   mdr32f9qx_usb.o
+    0x08001cc4   0x08001cc4   0x00000010   Code   RO         1088    i.USB_SetSEPxTXFDC  mdr32f9qx_usb.o
+    0x08001cd4   0x08001cd4   0x00000020   Code   RO         1089    i.USB_SetSIM        mdr32f9qx_usb.o
+    0x08001cf4   0x08001cf4   0x0000000c   Code   RO         1090    i.USB_SetSIS        mdr32f9qx_usb.o
+    0x08001d00   0x08001d00   0x00000018   Code   RO          125    i.VCom_Configuration  vcom_config.o
+    0x08001d18   0x08001d18   0x0000003c   Code   RO           56    i.main              main.o
+    0x08001d54   0x08001d54   0x00000010   Code   RO         1795    i.min               ringqueue.o
+    0x08001d64   0x08001d64   0x00000022   Code   RO         1860    i.uiAscii2byte      utility.o
+    0x08001d86   0x08001d86   0x00000002   PAD
+    0x08001d88   0x08001d88   0x00000030   Data   RO         2058    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001db8, Size: 0x000013d8, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08001db8   0x00000090   Code   RO          268    i.EEPROM_ErasePage  mdr32f9qx_eeprom.o
+    0x20000090   0x08001e48   0x00000038   Code   RO          269    i.EEPROM_ProgramByte  mdr32f9qx_eeprom.o
+    0x200000c8   0x08001e80   0x00000094   Code   RO          271    i.EEPROM_ProgramWord  mdr32f9qx_eeprom.o
+    0x2000015c   0x08001f14   0x0000005c   Code   RO          272    i.EEPROM_ReadByte   mdr32f9qx_eeprom.o
+    0x200001b8   0x08001f70   0x00000054   Code   RO          274    i.EEPROM_ReadWord   mdr32f9qx_eeprom.o
+    0x2000020c   0x08001fc4   0x00000014   Code   RO          276    i.ProgramDelay      mdr32f9qx_eeprom.o
+    0x20000220   0x08001fd8   0x00000004   Data   RW            4    .data               system_mdr32f9qx.o
+    0x20000224   0x08001fdc   0x00000020   Data   RW          127    .data               vcom_config.o
+    0x20000244   0x08001ffc   0x0000002e   Data   RW          176    .data               adg439.o
+    0x20000272   0x0800202a   0x00000006   Data   RW          206    .data               ad7610.o
+    0x20000278   0x08002030   0x000000a0   Data   RW         1413    .data               mdr32f9qx_usb_cdc.o
+    0x20000318   0x080020d0   0x00000010   Data   RW         1529    .data               mdr32f9qx_usb_device.o
+    0x20000328   0x080020e0   0x00000008   Data   RW         1721    .data               systick.o
+    0x20000330   0x080020e8   0x00000006   Data   RW         1748    .data               icpanibul.o
+    0x20000336   0x080020ee   0x00000002   PAD
+    0x20000338        -       0x00000458   Zero   RW           57    .bss                main.o
+    0x20000790        -       0x000004bc   Zero   RW          126    .bss                vcom_config.o
+    0x20000c4c        -       0x0000000c   Zero   RW         1412    .bss                mdr32f9qx_usb_cdc.o
+    0x20000c58        -       0x000000bc   Zero   RW         1528    .bss                mdr32f9qx_usb_device.o
+    0x20000d14        -       0x00000064   Zero   RW         1747    .bss                icpanibul.o
+    0x20000d78        -       0x00000060   Zero   RW         1932    .bss                c_w.l(libspace.o)
+    0x20000dd8        -       0x00000200   Zero   RW           49    HEAP                startup_mdr32f9qx.o
+    0x20000fd8        -       0x00000400   Zero   RW           48    STACK               startup_mdr32f9qx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       792        102          0          6          0      26858   ad7610.o
+        92         12          0         46          0       1648   adg439.o
+       494         74          0          6        100       3771   icpanibul.o
+        60         14          0          0       1112      27135   main.o
+       544         32          0          0          0       5041   mdr32f9qx_eeprom.o
+       476          6          0          0          0       2074   mdr32f9qx_port.o
+        32          6          0          0          0        566   mdr32f9qx_rst_clk.o
+       152         12          0          0          0       3941   mdr32f9qx_ssp.o
+       434        108          0          0          0      11054   mdr32f9qx_usb.o
+       672         94          0        160         12       7912   mdr32f9qx_usb_cdc.o
+      2120        118          0         16        188      19205   mdr32f9qx_usb_device.o
+       218          0          0          0          0       3413   ringqueue.o
+       212         14          0          0          0        546   spi.o
+        64         26        192          0       1536        852   startup_mdr32f9qx.o
+       468         34          0          4          0      52463   system_mdr32f9qx.o
+        64         14          0          8          0      17968   systick.o
+        34          0          0          0          0        547   utility.o
+       284         44          0         32       1212       4619   vcom_config.o
+
+    ----------------------------------------------------------------------
+      7254        710        240        280       4160     189613   Object Totals
+        30          0         48          0          0          0   (incl. Generated)
+        12          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        44          6          0          0          0         84   __2sprintf.o
+         8          0          0          0          0         68   __main.o
+        40          0          0          0          0         84   __printf_nopercent.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        48          6          0          0          0         96   _printf_char_common.o
+        10          0          0          0          0         68   _sputc.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+       138          0          0          0          0         68   rt_memcpy_v6.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       658         28          0          0         96       1064   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       652         28          0          0         96       1064   c_w.l
+
+    ----------------------------------------------------------------------
+       658         28          0          0         96       1064   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7912        738        240        280       4256     185629   Grand Totals
+      7912        738        240        280       4256     185629   ELF Image Totals
+      7912        738        240        280          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8152 (   7.96kB)
+    Total RW  Size (RW Data + ZI Data)              4536 (   4.43kB)
+    Total ROM Size (Code + RO Data + RW Data)       8432 (   8.23kB)
+
+==============================================================================
+

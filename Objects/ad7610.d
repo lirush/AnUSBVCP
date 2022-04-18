@@ -1,0 +1,13 @@
+.\objects\ad7610.o: chips\ad7610\ad7610.c
+.\objects\ad7610.o: chips\ad7610\ad7610.h
+.\objects\ad7610.o: .\chips\adg439\adg439.h
+.\objects\ad7610.o: .\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h
+.\objects\ad7610.o: .\lib\inc\cmsis\MDR32Fx.h
+.\objects\ad7610.o: .\lib\inc\cmsis\core_cm3.h
+.\objects\ad7610.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ad7610.o: .\lib\inc\cmsis\system_MDR32F9Qx.h
+.\objects\ad7610.o: .\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h
+.\objects\ad7610.o: .\config\MDR32F9Qx_config.h
+.\objects\ad7610.o: .\spi\spi.h
+.\objects\ad7610.o: .\lib\inc\MDR32F9Qx\MDR32F9Qx_ssp.h
+.\objects\ad7610.o: .\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h

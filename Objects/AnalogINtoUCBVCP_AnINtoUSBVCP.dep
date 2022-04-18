@@ -1,0 +1,206 @@
+Dependencies for Project 'AnalogINtoUCBVCP', Target 'AnINtoUSBVCP': (DO NOT MODIFY !)
+F (.\lib\src\cmsis\system_MDR32F9Qx.c)(0x6228B76D)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\system_mdr32f9qx.o --omf_browse .\objects\system_mdr32f9qx.crf --depend .\objects\system_mdr32f9qx.d)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+F (.\lib\src\cmsis\startup_MDR32F9Qx.s)(0x6230A895)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 527" --pd "USE_MDR32F9Q2_Rev1 SETA 1"--list .\listings\startup_mdr32f9qx.lst --xref -o .\objects\startup_mdr32f9qx.o --depend .\objects\startup_mdr32f9qx.d)
+F (.\main\main.c)(0x623C2EA1)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (main\main.h)(0x621CC300)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\app\vcp\VCom_Config.h)(0x6214AF3D)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+I (.\icpanibul\icpanibul.h)(0x621C9F38)
+I (.\queue\ringqueue.h)(0x622F13B5)
+I (.\chips\ad7610\ad7610.h)(0x6239C4F8)
+I (.\chips\adg439\adg439.h)(0x6230A768)
+F (.\app\vcp\VCom_Config.c)(0x6218B7FD)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\vcom_config.o --omf_browse .\objects\vcom_config.crf --depend .\objects\vcom_config.d)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+I (.\main\main.h)(0x621CC300)
+I (.\app\vcp\VCom_Config.h)(0x6214AF3D)
+I (.\icpanibul\icpanibul.h)(0x621C9F38)
+F (.\chips\adg439\adg439.c)(0x6239D6AB)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\adg439.o --omf_browse .\objects\adg439.crf --depend .\objects\adg439.d)
+I (chips\adg439\adg439.h)(0x6230A768)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\chips\ad7610\ad7610.c)(0x6239C4F8)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\ad7610.o --omf_browse .\objects\ad7610.crf --depend .\objects\ad7610.d)
+I (chips\ad7610\ad7610.h)(0x6239C4F8)
+I (.\chips\adg439\adg439.h)(0x6230A768)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\spi\spi.h)(0x621CCFC8)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_ssp.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_eeprom.c)(0x6228A391)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_eeprom.o --omf_browse .\objects\mdr32f9qx_eeprom.crf --depend .\objects\mdr32f9qx_eeprom.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_port.c)(0x4FAD31A3)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_port.o --omf_browse .\objects\mdr32f9qx_port.crf --depend .\objects\mdr32f9qx_port.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_rst_clk.c)(0x4FAD31A3)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_rst_clk.o --omf_browse .\objects\mdr32f9qx_rst_clk.crf --depend .\objects\mdr32f9qx_rst_clk.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_ssp.c)(0x4FAD31A3)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_ssp.o --omf_browse .\objects\mdr32f9qx_ssp.crf --depend .\objects\mdr32f9qx_ssp.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_ssp.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_timer.c)(0x4FAD31A3)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_timer.o --omf_browse .\objects\mdr32f9qx_timer.crf --depend .\objects\mdr32f9qx_timer.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_timer.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\MDR32F9Qx_usb.c)(0x4FAD31A3)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_usb.o --omf_browse .\objects\mdr32f9qx_usb.crf --depend .\objects\mdr32f9qx_usb.d)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_CDC.c)(0x624301A4)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_usb_cdc.o --omf_browse .\objects\mdr32f9qx_usb_cdc.crf --depend .\objects\mdr32f9qx_usb_cdc.d)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\lib\src\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.c)(0x6214A80C)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_usb_device.o --omf_browse .\objects\mdr32f9qx_usb_device.crf --depend .\objects\mdr32f9qx_usb_device.d)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\queue\ringqueue.h)(0x622F13B5)
+F (.\system\systick.c)(0x61E13252)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (system\systick.h)(0x61E12FC6)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+F (.\icpanibul\icpanibul.c)(0x623C2EA1)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\icpanibul.o --omf_browse .\objects\icpanibul.crf --depend .\objects\icpanibul.d)
+I (icpanibul\icpanibul.h)(0x621C9F38)
+I (.\app\vcp\VCom_Config.h)(0x6214AF3D)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+I (.\queue\ringqueue.h)(0x622F13B5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F137C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F137C)
+I (.\chips\ad7610\ad7610.h)(0x6239C4F8)
+I (.\utility\utility.h)(0x620BABDA)
+F (.\queue\ringqueue.c)(0x620BAFE0)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\ringqueue.o --omf_browse .\objects\ringqueue.crf --depend .\objects\ringqueue.d)
+I (queue\ringqueue.h)(0x622F13B5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F137C)
+F (.\spi\spi.c)(0x6239C50B)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (spi\spi.h)(0x621CCFC8)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_ssp.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+F (.\utility\utility.c)(0x622B5120)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\lib\inc\cmsis -I .\lib\inc\MDR32F9Qx -I .\lib\inc\MDR32F9Qx\USB_Library -I .\main -I .\app\vcp -I .\app\ansensors -I .\config -I .\system -I .\icpanibul -I .\queue -I .\chips\ad7610 -I .\chips\adg439 -I .\spi -I .\icpanibul -I .\utility-I.\RTE\_AnINtoUSBVCP-IC:\Users\murzina\AppData\Local\Arm\Packs\Keil\MDR1986BExx\1.51\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="527" -DUSE_MDR32F9Q2_Rev1-o .\objects\utility.o --omf_browse .\objects\utility.crf --depend .\objects\utility.d)
+I (utility\utility.h)(0x620BABDA)
+I (.\app\vcp\VCom_Config.h)(0x6214AF3D)
+I (.\lib\inc\cmsis\MDR32Fx.h)(0x4FAD31A3)
+I (.\lib\inc\cmsis\core_cm3.h)(0x4FAD31A3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x612625CD)
+I (.\lib\inc\cmsis\system_MDR32F9Qx.h)(0x61E92AA0)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_handlers.h)(0x5FABE95F)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_default_handlers.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_cdc.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_lib.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\USB_Library\MDR32F9Qx_usb_device.h)(0x61F141CD)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_usb.h)(0x4FAD31A3)
+I (.\config\MDR32F9Qx_config.h)(0x6214BA58)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_rst_clk.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_port.h)(0x4FAD31A3)
+I (.\lib\inc\MDR32F9Qx\MDR32F9Qx_eeprom.h)(0x622B5823)
+I (.\system\systick.h)(0x61E12FC6)
